@@ -45,7 +45,10 @@ class TestPage1 extends Component {
           yValueFormatString: "$#,###",
           xValueFormatString: "MMMM",
           type: "spline",
-          dataPoints: dummyData,
+          dataPoints: dummyData.map((entry) => ({
+            x: entry.year,
+            y: entry.population,
+          })),
           // [
           //   { x: new Date(2017, 0), y: 25060 },
           //   { x: new Date(2017, 1), y: 27980 },
