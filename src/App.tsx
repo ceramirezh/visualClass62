@@ -1,17 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./Components/Navbar";
+import NavBar from "./Components/NavBar";
 import Popultaion from "./Pages/Population";
+import "./App.scss";
 
 function App() {
   return (
     <div>
-      <h1>Start Project</h1>
-      {/* <NavBar> */}
+      <NavBar />
       <Routes>
         <Route path="/population" element={<Popultaion />} />
       </Routes>
-      {/* </NavBar> */}
     </div>
   );
 }
