@@ -1,7 +1,6 @@
 import React from "react";
 import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
 import * as FaIcons from "react-icons/fa";
 
 const SideBarData = [
@@ -18,9 +17,9 @@ const SideBarData = [
     cName: "nav-text",
   },
   {
-    title: "GitHub",
+    title: "Google Charts",
     path: "/",
-    icon: <FaIcons.FaGithub />,
+    icon: <AiIcons.AiFillGoogleCircle />,
     cName: "nav-text",
   },
   {
