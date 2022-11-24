@@ -1,81 +1,74 @@
-import React, { Component } from "react";
-import CanvasJSReact from "../Canvas/canvasjs.react";
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+import React from "react";
+import {
+  Chart as ChartJS,
+  LinearScale,
+  PointElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Bubble } from "react-chartjs-2";
+import { initialCountries } from "../Data/IntialData";
+import NL from "../Data/nederlands.json";
 
-const dummyData = [
-  {
-    year: 2016,
-    population: 16981286,
-  },
-  {
-    year: 2017,
-    population: 17021344,
-  },
-  {
-    year: 2018,
-    population: 17059560,
-  },
-  {
-    year: 2019,
-    population: 17097124,
-  },
-  {
-    year: 2020,
-    population: 17134874,
-  },
-];
+ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
 
-class TestPage1 extends Component {
-  render() {
-    const options = {
-      animationEnabled: true,
-      title: {
-        text: "Our Countries grew quite differently",
+const TestPage1 = () => {
+  // console.log(initialCountries);
+  const nlData = NL.Netherlands.data;
+  const year = nlData.map((y) => y.year);
+  const iterator = year.values();
+
+  for (const value of iterator) console.log("this is value", value);
+
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
       },
-      axisX: {
-        valueFormatString: "YYYY",
+    },
+  };
+
+  // const years = initialCountries.map((country) => country.colombia);
+  // console.log(years);
+
+  const data = {
+    datasets: [
+      {
+        label: "Red Dataset",
+        data: initialCountries.map((country) =>
+          country.netherlands
+            ? {
+                x: 1,
+                y: 9,
+                r: 10,
+              }
+            : {
+                x: 10,
+                y: 10,
+                r: 10,
+              }
+        ),
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
-      axisY: {
-        title: "Population",
-        prefix: "",
-      },
-      data: [
-        {
-          yValueFormatString: "$#,###",
-          xValueFormatString: "MMMM",
-          type: "spline",
-          dataPoints: dummyData.map((entry) => ({
-            x: entry.year,
-            y: entry.population,
-          })),
-          // [
-          //   { x: new Date(2017, 0), y: 25060 },
-          //   { x: new Date(2017, 1), y: 27980 },
-          //   { x: new Date(2017, 2), y: 42800 },
-          //   { x: new Date(2017, 3), y: 32400 },
-          //   { x: new Date(2017, 4), y: 35260 },
-          //   { x: new Date(2017, 5), y: 33900 },
-          //   { x: new Date(2017, 6), y: 40000 },
-          //   { x: new Date(2017, 7), y: 52500 },
-          //   { x: new Date(2017, 8), y: 32300 },
-          //   { x: new Date(2017, 9), y: 42000 },
-          //   { x: new Date(2017, 10), y: 37160 },
-          //   { x: new Date(2017, 11), y: 38400 },
-          // ],
-        },
-      ],
-    };
-    return (
-      <div>
-        <CanvasJSChart
-          options={options}
-          /* onRef={ref => this.chart = ref} */
-        />
-        {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
-      </div>
-    );
-  }
-}
+
+      // {
+      //   label: "Blue dataset",
+      //   data: Array.from({ length: 50 }, () => ({
+      //     x: faker.datatype.number({ min: -100, max: 100 }),
+      //     y: faker.datatype.number({ min: -100, max: 100 }),
+      //     r: faker.datatype.number({ min: 5, max: 20 }),
+      //   })),
+      //   backgroundColor: "rgba(53, 162, 235, 0.5)",
+      // },
+    ],
+  };
+
+  return (
+    <>
+      <h1>Hello</h1>
+      <Bubble options={options} data={data} />
+    </>
+  );
+};
 
 export default TestPage1;
