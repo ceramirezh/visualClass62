@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Chart as ChartJS,
   LinearScale,
@@ -18,7 +18,7 @@ const TestPage1 = () => {
   const year = nlData.map((y) => y.year);
   const iterator = year.values();
 
-  for (const value of iterator) console.log("this is value", value);
+  // for (const value of iterator) console.log("this is value", value);
 
   const options = {
     scales: {
@@ -28,26 +28,40 @@ const TestPage1 = () => {
     },
   };
 
-  // const years = initialCountries.map((country) => country.colombia);
-  // console.log(years);
+  // const [countryData, setCountryData] = useState({
+
+  // });
+
+  // const arraycountries = [1, 2, 3, 4, 5, 6, 7];
+  // let display = 1;
+  // for (let i = 0; i < arraycountries.length; i++) {
+  //   display = arraycountries[i];
+  // }
+
+  const netherlandsYear = initialCountries.map((country) =>
+    country.netherlands?.map((year) => year.year)
+  );
+  // console.log(netherlands);
 
   const data = {
     datasets: [
       {
         label: "Red Dataset",
-        data: initialCountries.map((country) =>
-          country.netherlands
-            ? {
-                x: 1,
-                y: 9,
-                r: 10,
-              }
-            : {
-                x: 10,
-                y: 10,
-                r: 10,
-              }
-        ),
+        data: initialCountries.map((country) => {
+          if (country.netherlands)
+            return {
+              x: country.netherlands.map((y) => y.year),
+              y: country.netherlands.map((p) => p.population),
+              r: country.netherlands.map((s) => s.share_global_co2 * 10),
+            };
+          else {
+            return {
+              x: 1,
+              y: 5,
+              r: 10,
+            };
+          }
+        }),
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
 
@@ -66,6 +80,7 @@ const TestPage1 = () => {
   return (
     <>
       <h1>Hello</h1>
+      <h2></h2>
       <Bubble options={options} data={data} />
     </>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { Bar } from "react-chartjs-2";
-import TestPage1 from "./TestPage1";
+// import TestPage1 from "./TestPage1";
 import LineChart from "../Components/LineChart";
 import NL from "../Data/nederlands.json";
 import CO from "../Data/colombia.json";
@@ -25,7 +25,7 @@ const Popultaion = () => {
     datasets: [
       {
         label: "Japan",
-        data: jpData.map((data) => data.population),
+        data: console.log(jpData.map((data) => data.population)),
         borderColor: "orange",
         borderWidth: 0.2,
       },

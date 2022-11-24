@@ -1,5 +1,3 @@
-import GoogleCharts from "../Components/GoogleCharts";
-import { Chart } from "react-google-charts";
 import NL from "../Data/nederlands.json";
 import CO from "../Data/colombia.json";
 import PO from "../Data/poland.json";
@@ -52,7 +50,7 @@ const GCharts = () => {
 
   return (
     <>
-      <Chart
+      {/* <Chart
         chartEvents={[
           {
             eventName: "select",
@@ -69,7 +67,7 @@ const GCharts = () => {
         width="100%"
         height="700px"
         data={data}
-      />
+      /> */}
     </>
   );
 };
