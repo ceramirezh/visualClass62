@@ -25,7 +25,7 @@ const Popultaion = () => {
     datasets: [
       {
         label: "Japan",
-        data: console.log(jpData.map((data) => data.population)),
+        data: jpData.map((data) => data.population),
         borderColor: "orange",
         borderWidth: 0.2,
       },
