@@ -17,8 +17,8 @@ const SideBarData = [
     cName: "nav-text",
   },
   {
-    title: "Google Charts",
-    path: "/",
+    title: "Charts.js",
+    path: "/chartsjs",
     icon: <AiIcons.AiFillGoogleCircle />,
     cName: "nav-text",
   },

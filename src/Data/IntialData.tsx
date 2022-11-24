@@ -7,11 +7,46 @@ import US from "../Data/usa.json";
 import JP from "../Data/japan.json";
 
 export const initialCountries = [
-  { netherlands: NL.Netherlands.data },
-  { colombia: CO.Colombia.data },
-  { poland: PO.Poland.data },
-  { china: CH.China.data },
-  { vietnam: VI.Vietnam.data },
-  { usa: US["United States"].data },
-  { japan: JP.Japan.data },
+  {
+    name: "Netherlands",
+    data: NL.Netherlands.data,
+    backgroundColor: "#003f5c",
+    borderColor: "",
+  },
+  {
+    name: "Colombia",
+    data: CO.Colombia.data,
+    backgroundColor: "#bc5090",
+    borderColor: "#000000",
+  },
+  {
+    name: "Poland",
+    data: PO.Poland.data,
+    backgroundColor: "#de5a79",
+    borderColor: "#000000",
+  },
+  {
+    name: "China",
+    data: CH.China.data,
+    backgroundColor: "#5adebf",
+    borderColor: "#000000",
+  },
+  {
+    name: "Vietnam",
+    data: VI.Vietnam.data,
+    backgroundColor: "#6361ff",
+    borderColor: "#000000",
+  },
+  {
+    name: "USA",
+    data: US["United States"].data,
+    backgroundColor: "#ff6361",
+    borderColor: "#000000",
+  },
+  {
+    name: "Japan",
+    data: JP.Japan.data,
+    backgroundColor: "#ffa600",
+    borderColor: "#000000",
+  },
 ];

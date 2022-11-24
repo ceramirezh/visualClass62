@@ -5,7 +5,7 @@ import CH from "../Data/china.json";
 import VI from "../Data/vietnam.json";
 import US from "../Data/usa.json";
 import JP from "../Data/japan.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const GCharts = () => {
   const initialCountries = [
