@@ -1,16 +1,7 @@
-import {
-  Chart as ChartJS,
-  LinearScale,
-  PointElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Bubble } from "react-chartjs-2";
+import BubbleChart from "../Components/BubbleChart";
 import { initialCountries } from "../Data/IntialData";
 
-ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
-
-const TestPage1 = () => {
+const ChartJs = () => {
   const options = {
     scales: {
       y: {
@@ -38,9 +29,9 @@ const TestPage1 = () => {
   return (
     <>
       <h1>Hello</h1>
-      <Bubble options={options} data={data} />
+      <BubbleChart options={options} data={data} />
     </>
   );
 };
 
-export default TestPage1;
+export default ChartJs;
