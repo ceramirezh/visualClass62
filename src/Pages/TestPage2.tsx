@@ -6,8 +6,8 @@ const TestPage2 = () => {
   return (
     <div>
       <h3>This is Test page 2</h3>
-      <WordTreeChart />
-      <BubbleAnimated />
+      {/* <WordTreeChart />
+      <BubbleAnimated /> */}
       <WorldMapChart />
     </div>
   );
