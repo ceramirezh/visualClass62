@@ -6,7 +6,18 @@ import VI from "../Data/vietnam.json";
 import US from "../Data/usa.json";
 import JP from "../Data/japan.json";
 
-export const initialCountries = [
+interface YearData {
+  [key: string]: number | undefined;
+}
+
+interface Country {
+  name: string;
+  data: YearData[];
+  backgroundColor: string;
+  borderColor: string;
+}
+
+export const initialCountries: Country[] = [
   {
     name: "Netherlands",
     data: NL.Netherlands.data,
