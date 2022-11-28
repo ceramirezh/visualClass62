@@ -1,0 +1,8 @@
+.section {
+  display: flex;
+  background: #ff1b68;
+  justify-content: center;
+  height: 100px;
+  margin-left: 150px;
+  margin-right: 2px;
+}

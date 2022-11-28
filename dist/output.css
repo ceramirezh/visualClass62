@@ -558,3 +558,7 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.inline-block {
+  display: inline-block;
+}
