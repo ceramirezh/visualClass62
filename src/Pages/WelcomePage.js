@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import * as d3 from "d3";
 import { csv, arc, pie } from "d3";
+import "./Css/styles.css";
 
-const width = 2858;
-const height = 2000;
+const width = 1950;
+const height = 1000;
 const centerX = width / 2;
 const centerY = height / 2;
 const circleRadious = 30;
@@ -32,29 +32,24 @@ const WelcomePage = () => {
   }
 
   return (
-    <svg width={width} height={height}>
-      <g transform={`translate(${centerX}, ${centerY})`}>
-        {pie()
-          .value(1)(data)
-          .map((d) => (
-            <path fill={d.data["RGB hex value"]} d={pieArc(d)} />
-          ))}
-        {/* {data.map((d, i) => (
-          <path
-            fill={d["RGB hex value"]}
-            d={pieArc({
-              startAngle: (i / data.length) * 2 * Math.PI,
-              endAngle: ((i + 1) / data.length) * 2 * Math.PI,
-            })} 
-          
-          > */}
-        {/* <svg width={width} height={height} onMouseMove={mouseHandler}>
-          <circle cx={mousePosition.x} cy={mousePosition.y} r={circleRadious} /> */}
-        {/* </svg> */}
-
-        {/* ))} */}
-      </g>
-    </svg>
+    <>
+      {/* <svg width={width} height={height} onMouseMove={mouseHandler}>
+        <circle cx={mousePosition.x} cy={mousePosition.y} r={circleRadious} />
+      </svg> */}
+      <svg width={width} height={height}>
+        <g transform={`translate(${centerX}, ${centerY})`}>
+          {pie()
+            .value(1)(data)
+            .map((d) => (
+              <path fill={d.data["RGB hex value"]} d={pieArc(d)} />
+            ))}
+          <text x={-700} y={0} fill="red" fontSize={"80"}>
+            Welcome To Visualizing Class 62
+          </text>
+        </g>
+      </svg>
+      {/* <button>Button</button> */}
+    </>
   );
 };
 

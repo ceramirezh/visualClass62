@@ -1,0 +1,51 @@
+h1 {
+  display: block;
+  text-align: center;
+}
+
+.content {
+  padding: 50px;
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.bubble-chart {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(219, 207, 207);
+  min-width: 1200px;
+  width: auto;
+  margin-right: 20px;
+  /* float: left; */
+}
+
+.text {
+  width: 400px;
+  background-color: rgb(219, 207, 207);
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 50px;
+  line-height: 25px;
+}
+
+.worldmap {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(219, 207, 207);
+  width: 100%;
+  margin-right: 20px;
+}
+
+.svg-chart {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(219, 207, 207);
+  width: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.svg-colors {
+  max-width: 100vw;
+  max-height: 100vw;
+}

@@ -1,6 +1,6 @@
 import BubbleAnimated from "../Components/GoogleCharts/BubbleAnimated";
 import WordTreeChart from "../Components/GoogleCharts/WordTree";
-import WorldMapChart from "../Components/GoogleCharts/WorldMap";
+import WorldMapChart from "./WorldMap";
 
 const TestPage2 = () => {
   return (

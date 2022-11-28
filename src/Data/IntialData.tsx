@@ -5,11 +5,16 @@ import CH from "../Data/china.json";
 import VI from "../Data/vietnam.json";
 import US from "../Data/usa.json";
 import JP from "../Data/japan.json";
-import { Value } from "sass";
 
 interface YearData {
   [key: string]: number | undefined;
 }
+
+// interface DataType {
+//  [ year: string;
+//   population: string;
+//   Co2perCapita: string;
+// ]}
 
 interface Country {
   name: string;
@@ -18,15 +23,15 @@ interface Country {
   borderColor: string;
 }
 
-export const dataFields = {
-  year: "year",
-  population: "population",
-  Co2perCapita: "cement_co2_per_capita",
+export const dataFields = [
+  "year",
+  "population",
+  "cement_co2_per_capita",
   // "cement_co2",
-  // "co2",
+  "co2",
   // "co2_growth_abs",
   // "co2_growth_prct",
-  // "co2_per_capita",
+  "co2_per_capita",
   // "co2_per_unit_energy",
   // "coal_co2",
   // "coal_co2_per_capita",
@@ -61,7 +66,7 @@ export const dataFields = {
   // "share_global_gas_co2",
   // "share_global_oil_co2",
   // "share_global_other_co2",
-};
+];
 
 export const initialCountries: Country[] = [
   {
