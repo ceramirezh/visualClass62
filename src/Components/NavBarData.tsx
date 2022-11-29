@@ -2,6 +2,7 @@ import React from "react";
 import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai";
 import * as TiIcons from "react-icons/ti";
+import * as TfiIcons from "react-icons/tfi";
 
 const SideBarData = [
   {
@@ -26,6 +27,12 @@ const SideBarData = [
     title: "Dynamic Data",
     path: "/dynamic_data",
     icon: <MdIcons.MdDynamicFeed />,
+    cName: "nav-text",
+  },
+  {
+    title: "Fun Data",
+    path: "/fun_data",
+    icon: <TfiIcons.TfiCommentsSmiley />,
     cName: "nav-text",
   },
   {

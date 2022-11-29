@@ -5,6 +5,7 @@ import CH from "../Data/china.json";
 import VI from "../Data/vietnam.json";
 import US from "../Data/usa.json";
 import JP from "../Data/japan.json";
+import BR from "../Data/brasil.json";
 
 interface YearData {
   [key: string]: number | undefined;
@@ -79,6 +80,12 @@ export const initialCountries: Country[] = [
     name: "Colombia",
     data: CO.Colombia.data,
     backgroundColor: "#bc5090",
+    borderColor: "#000000",
+  },
+  {
+    name: "Brasil",
+    data: BR.Brazil.data,
+    backgroundColor: "#0d4e21",
     borderColor: "#000000",
   },
   {
