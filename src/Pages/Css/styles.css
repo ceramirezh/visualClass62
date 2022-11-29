@@ -1,12 +1,21 @@
 h1 {
   display: block;
   text-align: center;
+  border-radius: 5px;
+  margin-top: 30px;
 }
 
 .content {
   padding: 50px;
   display: flex;
   font-size: 1.3rem;
+}
+
+.dynamic {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: rgb(219, 207, 207);
 }
 
 .bubble-chart {
@@ -30,10 +39,17 @@ h1 {
 
 .worldmap {
   border-radius: 5px;
+  align-items: center;
   padding: 10px;
   background-color: rgb(219, 207, 207);
   width: 100%;
   margin-right: 20px;
+}
+
+.text {
+  padding: 50px;
+  display: flex;
+  font-size: 1rem;
 }
 
 .svg-chart {

@@ -1,16 +1,17 @@
 import BubbleAnimated from "../Components/GoogleCharts/BubbleAnimated";
 import WordTreeChart from "../Components/GoogleCharts/WordTree";
-import WorldMapChart from "./WorldMap";
+import WorldData from "../Components/WorldData";
+import "./Css/styles.css";
 
-const TestPage2 = () => {
+const DynamicData = () => {
   return (
     <div>
-      <h3>This is Test page 2</h3>
+      <h1>The Dynamic World</h1>
       {/* <WordTreeChart />
       <BubbleAnimated /> */}
-      <WorldMapChart />
+      <WorldData />
     </div>
   );
 };
 
-export default TestPage2;
+export default DynamicData;

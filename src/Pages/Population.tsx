@@ -1,35 +1,39 @@
-import styled from "styled-components";
-import { useState } from "react";
-import LineChart from "../Components/LineChart";
-import NL from "../Data/nederlands.json";
+import BubbleChart from "../Components/BubbleChart";
 import { initialCountries } from "../Data/IntialData";
 import "./Css/styles.css";
 
-const Popultaion = () => {
-  // Uses for defining the "y" con chart
-  const nlData = NL.Netherlands.data;
+const ChartJs = () => {
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
 
-  // All the countries
-  const [globlaCo2, setGlobalCo2] = useState({
-    labels: nlData.map((data) => data.year),
+  const data = {
     datasets: initialCountries.map((c) => {
       return {
         label: c.name,
-        data: c.data.map((p) => p.share_global_co2),
-        borderColor: c.borderColor,
+        data: c.data.map((d) => {
+          return {
+            x: d.year,
+            y: d.population,
+            r: d.share_global_co2,
+          };
+        }),
         backgroundColor: c.backgroundColor,
-        borderWidth: 0.2,
       };
     }),
-  });
+  };
 
   return (
     <div>
-      <Title>Global share of Co2</Title>
+      <h1>
+        Historically, the US is responsible for the largest share in global Co2
+        per capita
+      </h1>
       <div className="content">
-        <div className="bubble-chart">
-          <LineChart chartData={globlaCo2} />
-        </div>
         <div className="text">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem esse
@@ -42,15 +46,12 @@ const Popultaion = () => {
             deleniti cum ratione vitae quo. In vitae eligendi repellat dicta.
           </p>
         </div>
+        <div className="bubble-chart">
+          <BubbleChart options={options} data={data} />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Popultaion;
-
-const Title = styled.h3`
-  display: flex;
-  font-size: 60;
-  justify-content: center;
-`;
+export default ChartJs;

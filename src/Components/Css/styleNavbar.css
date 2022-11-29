@@ -16,7 +16,7 @@
 .nav-menu {
   display: flex;
   background-color: #789ff3;
-  width: 220px;
+  width: 250px;
   height: 100vh;
   justify-content: center;
   position: fixed;

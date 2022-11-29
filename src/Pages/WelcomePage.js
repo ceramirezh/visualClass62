@@ -36,19 +36,21 @@ const WelcomePage = () => {
       {/* <svg width={width} height={height} onMouseMove={mouseHandler}>
         <circle cx={mousePosition.x} cy={mousePosition.y} r={circleRadious} />
       </svg> */}
-      <svg width={width} height={height}>
-        <g transform={`translate(${centerX}, ${centerY})`}>
-          {pie()
-            .value(1)(data)
-            .map((d) => (
-              <path fill={d.data["RGB hex value"]} d={pieArc(d)} />
-            ))}
-          <text x={-700} y={0} fill="red" fontSize={"80"}>
-            Welcome To Visualizing Class 62
-          </text>
-        </g>
-      </svg>
-      {/* <button>Button</button> */}
+      <div style={{ width: "100vw", height: "100vh" }}>
+        <svg width={"100%"} height={"100%"} viewBox={`0 0 ${width} ${height}`}>
+          <g transform={`translate(${centerX}, ${centerY})`}>
+            {pie()
+              .value(1)(data)
+              .map((d) => (
+                <path fill={d.data["RGB hex value"]} d={pieArc(d)} />
+              ))}
+            <text x={-700} y={0} fill="red" fontSize={"80"}>
+              Welcome To Visualizing Class 62
+            </text>
+          </g>
+        </svg>
+        {/* <button>Button</button> */}
+      </div>
     </>
   );
 };

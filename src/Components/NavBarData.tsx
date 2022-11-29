@@ -1,7 +1,7 @@
 import React from "react";
 import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai";
-import * as FaIcons from "react-icons/fa";
+import * as TiIcons from "react-icons/ti";
 
 const SideBarData = [
   {
@@ -11,21 +11,27 @@ const SideBarData = [
     cName: "nav-text",
   },
   {
-    title: "Population",
-    path: "/population",
+    title: "Global Co2",
+    path: "/co2",
+    icon: <TiIcons.TiWeatherWindy />,
+    cName: "nav-text",
+  },
+  {
+    title: "Class62 Population",
+    path: "/62population",
     icon: <MdIcons.MdNaturePeople />,
     cName: "nav-text",
   },
   {
-    title: "Charts.js",
-    path: "/chartsjs",
-    icon: <AiIcons.AiFillGoogleCircle />,
+    title: "Dynamic Data",
+    path: "/dynamic_data",
+    icon: <MdIcons.MdDynamicFeed />,
     cName: "nav-text",
   },
   {
-    title: "Extra 2",
-    path: "/",
-    icon: <AiIcons.AiFillHome />,
+    title: "Info",
+    path: "/info",
+    icon: <AiIcons.AiOutlineInfoCircle />,
     cName: "nav-text",
   },
 ];
