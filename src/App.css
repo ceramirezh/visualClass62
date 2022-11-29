@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto Mono", monospace, sans-serif;
+  /* background-color: #eee; */
 }
 .home {
   display: flex;

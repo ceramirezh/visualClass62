@@ -25,7 +25,7 @@ const Popultaion = () => {
 
   return (
     <div>
-      <Title>Global share of Co2</Title>
+      <h1>Global share of Co2</h1>
       <div className="content">
         <div className="bubble-chart">
           <LineChart chartData={globlaCo2} />
@@ -48,9 +48,3 @@ const Popultaion = () => {
 };
 
 export default Popultaion;
-
-const Title = styled.h3`
-  display: flex;
-  font-size: 60;
-  justify-content: center;
-`;

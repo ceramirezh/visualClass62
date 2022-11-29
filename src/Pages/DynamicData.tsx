@@ -5,11 +5,11 @@ import "./Css/styles.css";
 
 const DynamicData = () => {
   return (
-    <div>
+    <div className="general-background">
       <h1>The Dynamic World</h1>
-      {/* <WordTreeChart />
-      <BubbleAnimated /> */}
       <WorldData />
+      {/* <WordTreeChart /> */}
+      {/* <BubbleAnimated /> */}
     </div>
   );
 };

@@ -24,7 +24,7 @@ const WorldMapChart = () => {
 
   const dataStrutcture = worlMapdata(years, fields);
 
-  const eventHandler = (e: any) => {
+  const eventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setYear(parseInt(e.target.value));
   };
 

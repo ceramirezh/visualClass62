@@ -7,20 +7,20 @@ const DropDownMenu = ({
   return (
     <>
       <div className="dynamic">
-        <div>
-          Choose a Category
+        <div className="boxes">
+          <p>Choose a Category</p>
           <select onChange={onOptionChangeHandler}>
-            <option>Please choose one option</option>
+            <option>Choose one option</option>
 
             {dataFields.map((option: any, index: any) => {
               return <option key={index}>{option}</option>;
             })}
           </select>
         </div>
-        <div>
-          <p>Slide Years</p>
-          <p>{years}</p>
+        <div className="boxes">
+          <p>Choose a Year: {years}</p>
           <input
+            className="slider"
             type="range"
             min="1921"
             max="2020"
