@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import * as d3 from "d3";
 import { csv, arc, pie } from "d3";
 import "./Css/styles.css";
 
@@ -7,8 +6,6 @@ const width = 1950;
 const height = 1000;
 const centerX = width / 2;
 const centerY = height / 2;
-const circleRadious = 30;
-const initialMousePosition = { x: width / 2, y: height / 2 };
 const csvUrl =
   "https://gist.githubusercontent.com/ceramirezh/4cd3cc142655cdccc3b03521ad250b62/raw/cssColors.csv";
 

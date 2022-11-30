@@ -12,8 +12,6 @@ const csvUrl =
 const MouseFollower = () => {
   const width = 1950;
   const height = 1000;
-  const centerX = width / 2;
-  const centerY = height / 2;
   const circleRadious = 30;
   const initialMousePosition = { x: width / 2, y: height / 2 };
   const [mousePosition, setMousePostion] = useState(initialMousePosition);

@@ -4,10 +4,10 @@ const FaceContainer = ({ children, centerX, centerY, width, height }: any) => {
   return (
     <>
       <Box>
-        <svg width={""} viewBox={"0 0 1000 1000"}>
+        <svg width="170px" height="200px" border-color="black">
           <rect
             className="svg-chart"
-            fill={"#eee"}
+            fill={"white"}
             x={0}
             y={0}
             width={200}

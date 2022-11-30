@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import SmilyFace from "../Components/Smily/SmilyFace";
-import { initialCountries, dataFields } from "../Data/IntialData";
+import { initialCountries } from "../Data/IntialData";
+import "./Css/styles.css";
 
 import { range } from "d3";
 
@@ -25,8 +25,8 @@ const FunData = () => {
 
   const dataStrutcture = worlMapdata(2020, "co2");
 
-  const widthFace = 180;
-  const heigthFace = 180;
+  const widthFace = 166;
+  const heigthFace = 166;
   const array = range(5);
 
   return (
@@ -34,8 +34,17 @@ const FunData = () => {
       <div>
         <button onClick={refreshPage}>Click to reload!</button>
       </div>
-      <div>
-        <SmilyFace width={widthFace} height={heigthFace} array={array} />
+      <div className="container">
+        <div>
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div>
+        {/* <div className="right">
+          
+        </div>
+        <div className="right">
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div> */}
       </div>
     </>
   );
