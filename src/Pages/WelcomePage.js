@@ -15,13 +15,7 @@ const csvUrl =
 const pieArc = arc().innerRadius(0).outerRadius(width);
 
 const WelcomePage = () => {
-  const [mousePosition, setMousePostion] = useState(initialMousePosition);
   const [data, setData] = useState(null);
-
-  const mouseHandler = (e) => {
-    const { clientX, clientY } = e;
-    setMousePostion({ x: clientX, y: clientY });
-  };
 
   useEffect(() => {
     csv(csvUrl).then(setData);
