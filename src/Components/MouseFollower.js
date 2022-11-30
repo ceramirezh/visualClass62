@@ -17,7 +17,7 @@ const MouseFollower = () => {
   const circleRadious = 30;
   const initialMousePosition = { x: width / 2, y: height / 2 };
   const [mousePosition, setMousePostion] = useState(initialMousePosition);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
 
   useEffect(() => {
     csv(csvUrl).then(setData);
@@ -28,13 +28,23 @@ const MouseFollower = () => {
     setMousePostion({ x: clientX, y: clientY });
   };
 
-  const rbgCodes = data.map((c) => c["RGB hex value"]);
-  const randomElement = rbgCodes[Math.floor(Math.random() * rbgCodes.length)];
+  console.log(data);
+
+  // const rbgCodes = data.map((c) => c["RGB hex value"]);
+  // const randomElement = rbgCodes[Math.floor(Math.random() * rbgCodes.length)];
+
+  if (!data) {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div>
       <svg
-        fill={randomElement}
+        fill={"red"}
         width={width}
         height={height}
         onMouseMove={mouseHandler}

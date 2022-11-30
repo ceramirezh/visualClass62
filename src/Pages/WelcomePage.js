@@ -21,6 +21,8 @@ const WelcomePage = () => {
     csv(csvUrl).then(setData);
   }, []);
 
+  const randomNumber = Math.random();
+
   if (!data) {
     return <div>"Loading..."</div>;
   }
@@ -30,7 +32,7 @@ const WelcomePage = () => {
       {/* <svg width={width} height={height} onMouseMove={mouseHandler}>
         <circle cx={mousePosition.x} cy={mousePosition.y} r={circleRadious} />
       </svg> */}
-      <div style={{ width: "100vw", height: "100vh" }}>
+      <div key={randomNumber} style={{ width: "100vw", height: "100vh" }}>
         <svg width={"100%"} height={"100%"} viewBox={`0 0 ${width} ${height}`}>
           <g transform={`translate(${centerX}, ${centerY})`}>
             {pie()
