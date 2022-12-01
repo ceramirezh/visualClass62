@@ -8,6 +8,8 @@ import DynamicData from "./Pages/DynamicData";
 import ForMyUnderstanding from "./TryCss.txs/ForMyUnderstanding";
 import WelcomePage from "./Pages/WelcomePage";
 import FunData from "./Pages/FunData";
+import DataLogic from "./Components/DataLogic";
+import FollowTheMouse from "./Pages/FollowTheMouse";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/dynamic_data" element={<DynamicData />} />
         <Route path="/62population" element={<ChartsJs />} />
         <Route path="/fun_data" element={<FunData />} />
+        <Route path="/mouse" element={<FollowTheMouse />} />
+        <Route path="/test" element={<DataLogic />} />
       </Routes>
     </div>
   );

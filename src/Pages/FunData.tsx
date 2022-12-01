@@ -1,10 +1,14 @@
-import React, { useState } from "react";
 import SmilyFace from "../Components/Smily/SmilyFace";
-import { initialCountries, dataFields } from "../Data/IntialData";
+import { initialCountries } from "../Data/IntialData";
+import "./Css/styles.css";
 
 import { range } from "d3";
 
 const FunData = () => {
+  function refreshPage() {
+    window.location.reload();
+  }
+
   const worlMapdata = (year: number, field: string) => [
     ["Country", field],
     ...initialCountries.map((c) => {
@@ -19,13 +23,29 @@ const FunData = () => {
     }),
   ];
 
-  const width = 166;
-  const heigth = 166;
-  const array = range(2);
+  const dataStrutcture = worlMapdata(2020, "co2");
+
+  const widthFace = 166;
+  const heigthFace = 166;
+  const array = range(5);
 
   return (
     <>
-      <SmilyFace width={width} height={heigth} array={array} />
+      <div>
+        <button onClick={refreshPage}>Click to reload!</button>
+      </div>
+      <div className="container">
+        <div>
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div>
+        {/* <div className="right">
+          
+        </div>
+        <div className="right">
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div> */}
+      </div>
     </>
   );
 };

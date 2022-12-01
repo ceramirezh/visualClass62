@@ -2,7 +2,7 @@
   display: flex;
   background-color: #789ff3;
   height: 60px;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px;
 }
@@ -30,7 +30,7 @@ nav-menu active {
 }
 .nav-text {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;
@@ -58,7 +58,7 @@ nav-menu active {
   background-color: #789ff3;
   width: 100%;
   height: 80px;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 

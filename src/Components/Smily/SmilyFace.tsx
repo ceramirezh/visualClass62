@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FullFace } from "./FullFace";
 
 const SmilyFace: any = ({ width, height, array }: any) =>

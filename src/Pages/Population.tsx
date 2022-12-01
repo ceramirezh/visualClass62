@@ -1,5 +1,7 @@
 import BubbleChart from "../Components/BubbleChart";
+import MouseFollower from "../Components/MouseFollower";
 import { initialCountries } from "../Data/IntialData";
+
 import "./Css/styles.css";
 
 const ChartJs = () => {
