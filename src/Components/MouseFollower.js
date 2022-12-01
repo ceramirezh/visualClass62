@@ -28,9 +28,6 @@ const MouseFollower = () => {
 
   console.log(data);
 
-  // const rbgCodes = data.map((c) => c["RGB hex value"]);
-  // const randomElement = rbgCodes[Math.floor(Math.random() * rbgCodes.length)];
-
   if (!data) {
     return (
       <div>
@@ -38,11 +35,14 @@ const MouseFollower = () => {
       </div>
     );
   }
+  const rbgCodes = data.map((c) => c["RGB hex value"]);
+  const randomNumber = Math.floor(Math.random());
+  const randomElement = rbgCodes[Math.floor(Math.random() * rbgCodes.length)];
 
   return (
-    <div>
+    <div key={randomNumber}>
       <svg
-        fill={"red"}
+        fill={randomElement}
         width={width}
         height={height}
         onMouseMove={mouseHandler}
