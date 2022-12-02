@@ -27,16 +27,15 @@ const FunData = () => {
 
   const widthFace = 166;
   const heigthFace = 166;
-  const array = range(5);
+  const array = range(1);
 
   return (
     <>
-      <div>
-        <button onClick={refreshPage}>Click to reload!</button>
-      </div>
+      <h1>Soon...</h1>
+      <div>{/* <button onClick={refreshPage}>Click to reload!</button> */}</div>
       <div className="container">
         <div>
-          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          {/* <SmilyFace width={widthFace} height={heigthFace} array={array} /> */}
           <SmilyFace width={widthFace} height={heigthFace} array={array} />
         </div>
         {/* <div className="right">
