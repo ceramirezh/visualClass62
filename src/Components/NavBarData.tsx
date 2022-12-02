@@ -8,7 +8,7 @@ import * as BsIcons from "react-icons/bs";
 const SideBarData = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },

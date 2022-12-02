@@ -9,6 +9,9 @@ const ChartJs = () => {
     scales: {
       y: {
         beginAtZero: true,
+        title: {
+          text: "Population of Countries",
+        },
       },
     },
   };
@@ -38,14 +41,17 @@ const ChartJs = () => {
       <div className="content">
         <div className="text">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem esse
-            unde, velit quam, vero eligendi doloribus nisi illo corrupti nulla
-            deleniti cum ratione vitae quo. In vitae eligendi repellat dicta.
+            It is not unusual to think that China and the United States are big
+            contributors to Co2. But looking at their per capita contribution
+            makes it more interesting. This graph shows the per capita Co2
+            contribution over the last 100 years in relation to the growth of
+            the country's population.
           </p>
+
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem esse
-            unde, velit quam, vero eligendi doloribus nisi illo corrupti nulla
-            deleniti cum ratione vitae quo. In vitae eligendi repellat dicta.
+            The radius of the circle represents co2 per capita. The dataset
+            values are in decimals. To make the circles visible, I multiplied
+            the values by a factor of 10.
           </p>
         </div>
         <div className="bubble-chart">

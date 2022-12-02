@@ -72,6 +72,7 @@ p {
 .text {
   padding: 50px;
   display: flex;
+  flex-direction: column;
   font-size: 1rem;
   margin-right: 100px;
 }

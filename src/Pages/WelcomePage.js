@@ -53,9 +53,6 @@ const WelcomePage = () => {
               stroke-width="3"
               opacity="0.3"
               fill="black"
-              onClick={() => {
-                navigate("/co2");
-              }}
             />
             <text x="925" y="548" font-size="35" fill="White">
               Enter
@@ -71,7 +68,7 @@ const WelcomePage = () => {
               opacity="0.0"
               fill="black"
               onClick={() => {
-                navigate("/co2");
+                navigate("/home");
               }}
             />
           </g>

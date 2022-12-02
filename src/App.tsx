@@ -10,6 +10,7 @@ import WelcomePage from "./Pages/WelcomePage";
 import FunData from "./Pages/FunData";
 import DataLogic from "./Components/DataLogic";
 import FollowTheMouse from "./Pages/FollowTheMouse";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<WelcomePage />} />
-        <Route path="/home" element={<ForMyUnderstanding />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/co2" element={<Popultaion />} />
         <Route path="/dynamic_data" element={<DynamicData />} />
         <Route path="/62population" element={<ChartsJs />} />

@@ -1,5 +1,5 @@
 import SmilyFace from "../Components/Smily/SmilyFace";
-import { initialCountries } from "../Data/IntialData";
+// import { initialCountries } from "../Data/IntialData";
 import "./Css/styles.css";
 
 import { range } from "d3";
@@ -9,21 +9,21 @@ const FunData = () => {
     window.location.reload();
   }
 
-  const worlMapdata = (year: number, field: string) => [
-    ["Country", field],
-    ...initialCountries.map((c) => {
-      const countryYearData = c.data.find((yearData) =>
-        yearData.year ? yearData.year === year : false
-      );
-      const dataValue =
-        countryYearData && countryYearData[field]
-          ? countryYearData[field]
-          : NaN;
-      return [c.name, dataValue];
-    }),
-  ];
+  // const worlMapdata = (year: number, field: string) => [
+  //   ["Country", field],
+  //   ...initialCountries.map((c) => {
+  //     const countryYearData = c.data.find((yearData) =>
+  //       yearData.year ? yearData.year === year : false
+  //     );
+  //     const dataValue =
+  //       countryYearData && countryYearData[field]
+  //         ? countryYearData[field]
+  //         : NaN;
+  //     return [c.name, dataValue];
+  //   }),
+  // ];
 
-  const dataStrutcture = worlMapdata(2020, "co2");
+  // const dataStrutcture = worlMapdata(2020, "co2");
 
   const widthFace = 166;
   const heigthFace = 166;
