@@ -1,5 +1,6 @@
 .boxes-home {
   display: flex;
+  justify-content: center;
   height: auto;
   width: auto;
   /* border: 5px solid rgb(27, 27, 27); */
@@ -14,6 +15,10 @@
 
 .button {
   /* background-color: #4caf50; Green */
+  position: center;
+  /* display: flex;
+  flex-direction: row; */
+  align-self: center;
   border: none;
   color: white;
   padding: 20px;
