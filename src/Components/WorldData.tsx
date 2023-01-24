@@ -32,6 +32,7 @@ const WorldMapChart = () => {
     setFields(event.target.value);
   };
 
+  console.log(dataStrutcture);
   return (
     <>
       <div className="content">
