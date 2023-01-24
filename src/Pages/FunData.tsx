@@ -32,10 +32,44 @@ const FunData = () => {
   return (
     <>
       <h1>Soon...</h1>
-      <div>{/* <button onClick={refreshPage}>Click to reload!</button> */}</div>
+      <div>
+        <button onClick={refreshPage}>Click to reload!</button>
+      </div>
       <div className="container">
-        <div>
-          {/* <SmilyFace width={widthFace} height={heigthFace} array={array} /> */}
+        <div className="smily">
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div>
+        <div className="smily">
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div>
+        <div className="smily">
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+        </div>
+        <div className="smily">
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
+          <SmilyFace width={widthFace} height={heigthFace} array={array} />
           <SmilyFace width={widthFace} height={heigthFace} array={array} />
         </div>
         {/* <div className="right">

@@ -106,7 +106,7 @@ p {
 .container {
   height: 1000px;
   width: 2000;
-  background-color: red;
+  background-color: whites;
   /* overflow: hidden; */
 }
 .right {
@@ -118,4 +118,9 @@ p {
   background: #e3e3dc;
   width: 300px;
   overflow: hidden;
+}
+
+.smily {
+  display: flex;
+  flex-direction: row;
 }
